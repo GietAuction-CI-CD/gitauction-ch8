@@ -1,0 +1,7 @@
+name: Old
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-go@v4 #테스트를 위해 오래된 버전을 일부러 개시
