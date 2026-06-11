@@ -10,7 +10,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - id: meta                             # 의존성 메타데이터 가져오기
         uses: dependabot/fetch-metadata@v3   # 조건 분기로 버전 업데이트인지 확인
       - if: ${{ steps.meta.outputs.update_type == 'version-update:semver-patch' }}
